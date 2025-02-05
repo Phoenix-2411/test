@@ -1,0 +1,12 @@
+# Node modules folder
+node_modules/
+
+# Log files
+npm-debug.log
+
+# Environment variables file
+.env
+
+# Build folders (if using any build system)
+dist/
+build/

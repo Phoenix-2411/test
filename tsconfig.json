@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "node",
+      "sequelize"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/migrations/20250205125410-create-user-table.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

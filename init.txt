@@ -1,0 +1,12 @@
+npm init -y
+
+npm i typescript @types/node ts-node ts-node-dev -D
+
+npm i express dotenv
+
+tsc --init
+
+npm i sequelize pg pg-hstore
+
+npm i sequelize-cli -D
+npx sequelize-cli init
