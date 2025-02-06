@@ -20,9 +20,9 @@ class User extends Model {
 
     // Static method to define associations
     static associate(models: any) {
+        User.belongsTo(models.Client, { foreignKey: 'clientId', as: 'client' });
         User.belongsTo(models.Role, { foreignKey: 'roleId', as: 'role' });
         User.belongsTo(models.Profile, { foreignKey: 'profileId', as: 'profile' });
-
     }
 }
 

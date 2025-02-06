@@ -61,8 +61,10 @@ module.exports = {
   },
 
   down: async (queryInterface) => {
-    await queryInterface.dropTable('user', {  // Drop the 'user' table from the 'userservice' schema
+    await queryInterface.dropTable({
+      tableName: 'user',
       schema: 'userservice',
     });
   }
+
 };

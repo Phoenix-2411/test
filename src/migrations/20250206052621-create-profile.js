@@ -64,8 +64,9 @@ module.exports = {
         schema: 'userservice',
       });
   },
-  async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('profile', {
+  down: async (queryInterface) => {
+    await queryInterface.dropTable({
+      tableName: 'profile',
       schema: 'userservice',
     });
   }
