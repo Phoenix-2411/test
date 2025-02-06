@@ -59,6 +59,16 @@ module.exports = {
       profilePicture: {
         type: DataTypes.STRING(255),
       },
+      createdAt: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.literal('NOW()'),
+      },
+      updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.literal('NOW()'),
+      },
     },
       {
         schema: 'userservice',

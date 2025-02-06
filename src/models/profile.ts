@@ -84,7 +84,7 @@ Profile.init(
     schema: 'userservice',
     modelName: 'Profile',
     tableName: 'profile',
-    timestamps: false,
+    timestamps: true,
   }
 );
 

@@ -23,6 +23,7 @@ class User extends Model {
         User.belongsTo(models.Client, { foreignKey: 'clientId', as: 'client' });
         User.belongsTo(models.Role, { foreignKey: 'roleId', as: 'role' });
         User.belongsTo(models.Profile, { foreignKey: 'profileId', as: 'profile' });
+
     }
 }
 
@@ -73,7 +74,8 @@ User.init(
         modelName: 'User',
         schema: 'userservice', // Set the schema name explicitly
         tableName: 'user', // Table name in your database
-        timestamps: false, // Enable timestamps (createdAt and updatedAt)
+        timestamps: true,
+
     }
 );
 

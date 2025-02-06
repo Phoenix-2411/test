@@ -3,7 +3,7 @@ const { DataTypes } = require('sequelize');
 const { AutoIncrement } = require('sequelize-typescript');
 
 module.exports = {
-  up: async (queryInterface) => {
+  up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('user', {  // Table name is 'user'
       id: {
         type: DataTypes.INTEGER,
@@ -54,6 +54,16 @@ module.exports = {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
         allowNull: false,
+      },
+      createdAt: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.literal('NOW()'),
+      },
+      updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.literal('NOW()'),
       },
     }, {
       schema: 'userservice',  // Specify the schema 'userservice'

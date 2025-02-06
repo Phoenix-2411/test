@@ -26,6 +26,7 @@ Client.init({
   modelName: 'Client',
   schema: 'userservice',
   tableName: 'client',
+  timestamps: true,
 });
 
 export default Client;
